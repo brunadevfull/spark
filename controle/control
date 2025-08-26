@@ -1,0 +1,9 @@
+Package: spark
+Version: 3.0.2
+Installed-Size: 76648
+Priority: optional
+Architecture: all
+Maintainer: Ignite Realtime
+Date: Fri, 31 Mar 2023 16:27:38 +0000
+Description: spark
+

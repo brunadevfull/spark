@@ -1,0 +1,17 @@
+#!/bin/sh
+I4J_INSTALL_LOCATION="/opt/Spark"
+cd "$I4J_INSTALL_LOCATION"
+if [ "$1" = "upgrade" ] || [ "$1" = "remove" ]; then
+
+
+rm "/usr/local/bin/Spark" 2>/dev/null
+xdg-desktop-menu uninstall --mode system "$I4J_INSTALL_LOCATION/.install4j/install4j_1srd41-Spark.desktop" 2>/dev/null
+rm "$I4J_INSTALL_LOCATION/.install4j/install4j_1srd41-Spark.desktop"
+rm "$I4J_INSTALL_LOCATION/Spark.desktop"
+rm "/usr/local/bin/starter" 2>/dev/null
+xdg-desktop-menu uninstall --mode system "$I4J_INSTALL_LOCATION/.install4j/install4j_1srd41-starter.desktop" 2>/dev/null
+rm "$I4J_INSTALL_LOCATION/.install4j/install4j_1srd41-starter.desktop"
+rm "$I4J_INSTALL_LOCATION/starter.desktop"
+rm -Rf "$I4J_INSTALL_LOCATION/jre/lib"
+fi
+exit 0
